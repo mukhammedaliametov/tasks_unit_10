@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -15,6 +15,7 @@ const Sidebar = () => {
     { name: "Task 7", link: "/task-7" },
   ];
   return (
+    <>
       <div className="w-[300px] fixed left-0 top-0 h-screen bg-[#181818] flex items-center justify-center">
         <div className="flex flex-col gap-[20px]">
           {tasks.map((item) => (
@@ -22,7 +23,9 @@ const Sidebar = () => {
               to={item.link}
               onClick={() => setNav(item.link)}
               className={`border border-primary-blue py-[10px] px-[50px] text-white font-inter rounded-[10px] ${
-                nav === item.link ? "bg-primary-blue border-primary-blue" : "bg-transparent"
+                nav === item.link
+                  ? "bg-primary-blue border-primary-blue"
+                  : "bg-transparent"
               }`}
             >
               {item.name}
@@ -30,6 +33,8 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
+      <Outlet />
+    </>
   );
 };
 
