@@ -21,13 +21,13 @@ const Task1 = () => {
 
   return (
     <div className="my-container font-inter">
-      <h3 className="text-white text-[20px]">
+      <h3 className="text-white text-[20px] pt-[100px] md:pt-0">
         Sonlar orasidagi max va min Funksiya argument sifatida n va m ta sonni
         qabul qiladi. For siklidan foydalanib eng katta va eng kichik sonni
         topib qaytaradi.
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 mt-[40px] md:mt-[80px]">
-        <div>
+        <div className="mb-[20px] md:mb-0">
           <label htmlFor="min" className="text-white text-[22px]">
             Min:
           </label>

@@ -18,11 +18,11 @@ const Task3 = () => {
 
   return (
     <div className="my-container font-inter">
-      <h3 className="text-white text-[20px]">
+      <h3 className="text-white text-[20px] pt-[100px] md:pt-0">
         Sonlarni teskari chiqarish Funksiya argument sifatida n sonini qabul
         qiladi va n dan 1 gacha bo'lgan sonlarni for sikilda chiqaradi.
       </h3>
-      <div className="mt-[80px]">
+      <div className="mt-[40px] md:mt-[80px]">
         <div>
           <label htmlFor="num" className="text-white text-[22px]">
             Num:

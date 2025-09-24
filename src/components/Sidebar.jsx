@@ -33,8 +33,8 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
-      <div className="fixed w-full py-[20px] px-[30px]  bg-[#181818]">
-        <div className="flex md:hidden justify-between gap-[10px] overflow-x-scroll md:overflow-x-visible">
+      <div className="hidden md:hidden fixed w-full py-[20px] px-[30px]  bg-[#181818]">
+        <div className="flex justify-between gap-[10px] overflow-x-scroll md:overflow-x-visible">
           {tasks.map((item) => (
             <Link
               to={item.link}

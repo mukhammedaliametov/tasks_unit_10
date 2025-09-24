@@ -30,11 +30,11 @@ const Task2 = () => {
 
   return (
     <div className="my-container font-inter">
-      <h3 className="text-white text-[20px]">
+      <h3 className="text-white text-[20px] pt-[70px] md:pt-0">
         Tub sonni tekshirish Funksiya argument sifatida n sonini qabul qiladi.
         For sikli yordamida n tub son ekanligini tekshiradi (ha yoki yo'q)
       </h3>
-      <div className="mt-[80px]">
+      <div className="mt-[40px] md:mt-[80px]">
         <div>
           <label htmlFor="num" className="text-white text-[22px]">
             Num:

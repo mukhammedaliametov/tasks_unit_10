@@ -16,11 +16,11 @@ const Task5 = () => {
   }, [num]);
   return (
     <div className="my-container font-inter">
-      <h3 className="text-white text-[20px]">
+      <h3 className="text-white text-[20px] pt-[100px] md:pt-0">
         Sonni teskari yozish Funkciya argument sifatida n qabul qiladi. For
         sikli yordamida sonni teskariga (masalan, 123 to 321) qaytaradi.
       </h3>
-      <div className="mt-[80px]">
+      <div className="mt-[40px] md:mt-[80px]">
         <div>
           <label htmlFor="num" className="text-white text-[22px]">
             Num:
