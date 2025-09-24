@@ -4,6 +4,18 @@ const Task6 = () => {
   const [num, setNum] = useState(0);
   const [output, setOutput] = useState("");
 
+  useEffect(() => {
+    if(num == undefined || num == 0) return setOutput('');
+    let a = 0;
+    let b = 1;
+    for(let i = 2; i <= num; i++){
+        let next = a + b
+        a = b;
+        b = next;
+    }
+    setOutput(b);
+  })
+
   return (
       <div className="my-container font-inter">
         <h3 className="text-white text-[20px]">
@@ -22,14 +34,14 @@ const Task6 = () => {
               className="border border-white focus:border-primary-blue py-[5px] px-[15px] rounded-[10px] outline-none text-white text-[18px] ml-2"
             />
           </div>
-          <div className="inline-flex flex-col gap-[10px] mt-[40px]">
+          <div className="inline-flex flex-col gap-[10px] mt-[40px] w-full">
             <label htmlFor="output" className="text-white text-[22px]">
               Output:
             </label>
             <textarea
               type="text"
               value={output}
-              className="w-[450px] border border-white py-[5px] px-[15px] rounded-[10px] outline-none text-white text-[18px] opacity-20 bg-[#0000003a] resize-none h-[150px]"
+              className="w-full md:w-[450px] border border-white py-[5px] px-[15px] rounded-[10px] outline-none text-white text-[18px] opacity-20 bg-[#0000003a] resize-none h-[150px]"
               disabled
             ></textarea>
           </div>

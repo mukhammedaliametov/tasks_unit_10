@@ -26,7 +26,7 @@ const Task1 = () => {
         qabul qiladi. For siklidan foydalanib eng katta va eng kichik sonni
         topib qaytaradi.
       </h3>
-      <div className="grid grid-cols-2 mt-[80px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-[40px] md:mt-[80px]">
         <div>
           <label htmlFor="min" className="text-white text-[22px]">
             Min:

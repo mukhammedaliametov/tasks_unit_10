@@ -16,8 +16,8 @@ const Sidebar = () => {
   ];
   return (
     <>
-      <div className="w-[300px] fixed left-0 top-0 h-screen bg-[#181818] flex items-center justify-center">
-        <div className="flex flex-col gap-[20px]">
+      <div className="w-[300px] fixed left-0 top-0 h-screen bg-[#181818] hidden md:flex items-center justify-center">
+        <div className="hidden md:flex flex-col gap-[20px]">
           {tasks.map((item) => (
             <Link
               to={item.link}
@@ -29,6 +29,23 @@ const Sidebar = () => {
               }`}
             >
               {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+      <div className="fixed w-full py-[20px] px-[30px]  bg-[#181818]">
+        <div className="flex md:hidden justify-between gap-[10px] overflow-x-scroll md:overflow-x-visible">
+          {tasks.map((item) => (
+            <Link
+              to={item.link}
+              onClick={() => setNav(item.link)}
+              className={`border border-primary-blue py-[10px] px-[20px] text-white font-inter rounded-[10px] ${
+                nav === item.link
+                  ? "bg-primary-blue border-primary-blue"
+                  : "bg-transparent"
+              }`}
+            >
+              {item.name[5]}
             </Link>
           ))}
         </div>
