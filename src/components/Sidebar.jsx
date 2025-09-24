@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link, useLocation, Outlet } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const sidebar = () => {
+const Sidebar = () => {
   const location = useLocation();
   const [nav, setNav] = useState(location.pathname);
 
@@ -15,7 +15,6 @@ const sidebar = () => {
     { name: "Task 7", link: "/task-7" },
   ];
   return (
-    <>
       <div className="w-[300px] fixed left-0 top-0 h-screen bg-[#181818] flex items-center justify-center">
         <div className="flex flex-col gap-[20px]">
           {tasks.map((item) => (
@@ -31,9 +30,7 @@ const sidebar = () => {
           ))}
         </div>
       </div>
-      <Outlet />
-    </>
   );
 };
 
-export default sidebar;
+export default Sidebar;

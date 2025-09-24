@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
 import Task1 from "./pages/Task1";
 import Task2 from "./pages/Task2";
 import Task3 from "./pages/Task3";
@@ -7,7 +8,6 @@ import Task4 from "./pages/Task4";
 import Task5 from "./pages/Task5";
 import Task6 from "./pages/Task6";
 import Task7 from "./pages/Task7";
-import Sidebar from "./components/sidebar";
 
 const App = () => {
   return (
