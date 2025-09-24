@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
 
-const Sidebar = () => {
+const sidebar = () => {
   const location = useLocation();
   const [nav, setNav] = useState(location.pathname);
 
@@ -36,4 +36,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default sidebar;
